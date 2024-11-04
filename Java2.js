@@ -56,7 +56,7 @@ const products = [
 ];
 
 const pageMappings = {
-    'home': "Home.html",
+    'home': "index.html",
     'shop': "Shop.html",
     'about us': "About.html",
     'contact us': "Contact.html",
