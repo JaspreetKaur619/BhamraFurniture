@@ -1,0 +1,636 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Order Confirmation - Bhamra Furniture</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-white {
+            color: #ffffff;
+        }
+
+        .text-gray-100 {
+            color: #f3f4f6;
+        }
+
+        .text-gray-600 {
+            color: #4b5563;
+        }
+
+        .text-gray-700 {
+            color: #374151;
+        }
+
+        .text-gray-800 {
+            color: #1f2937;
+        }
+
+        .text-gray-900 {
+            color: #111827;
+        }
+
+        .text-xl {
+            font-size: 20px;
+        }
+
+        .text-3xl {
+            font-size: 30px;
+        }
+
+        .text-5xl {
+            font-size: 48px;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .bg-white {
+            background-color: #ffffff;
+        }
+
+        .bg-gray-100 {
+            background-color: #f3f4f6;
+        }
+
+        .bg-gray-200 {
+            background-color: #e5e7eb;
+        }
+
+        .bg-gray-800 {
+            background-color: #1f2937;
+        }
+
+        .bg-blue-500 {
+            background-color: #3b82f6;
+        }
+
+        .hover-bg-blue:hover {
+            background-color: #2563eb;
+        }
+
+        .hover-text-blue:hover {
+            color: #2563eb;
+        }
+
+        .rounded {
+            border-radius: 4px;
+        }
+
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .rounded-l {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .rounded-r {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        .shadow-md {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .transition {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .duration-300 {
+            transition-duration: 300ms;
+        }
+
+        .transform {
+            transform: scale(1);
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .h-12 {
+            height: 48px;
+        }
+
+        .h-48 {
+            height: 192px;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .object-cover {
+            object-fit: cover;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .p-6 {
+            padding: 24px;
+        }
+
+        .py-3 {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .py-6 {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        .py-12 {
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+
+        .px-4 {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .px-6 {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .mb-2 {
+            margin-bottom: 8px;
+        }
+
+        .mb-4 {
+            margin-bottom: 16px;
+        }
+
+        .mb-8 {
+            margin-bottom: 32px;
+        }
+
+        .space-x-4 > * + * {
+            margin-left: 16px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .md\:grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .lg\:grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .gap-8 {
+            gap: 32px;
+        }
+
+        .bg-cover {
+            background-size: cover;
+        }
+
+        .bg-center {
+            background-position: center;
+        }
+
+        .h-screen {
+            height: 100vh;
+        }
+
+        .rounded-lg {
+            border-radius: 8px;
+        }
+
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .border {
+            border-width: 1px;
+        }
+
+        .border-gray-300 {
+            border-color: #d1d5db;
+        }
+
+        .hover\:text-gray-400:hover {
+            color: #9ca3af;
+        }
+
+        .hover\:bg-blue-600:hover {
+            background-color: #2563eb;
+        }
+
+        .hover\:shadow-lg:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+
+        .no-underline {
+            text-decoration: none;
+        }
+
+        .search-input {
+            width: 200px;
+            height: 40px;
+        }
+
+        .search-button {
+            height: 40px;
+            border: none;
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Cursor pointer on button hover */
+        button:hover, a:hover {
+            cursor: pointer;
+        }
+
+        /* Navbar link hover and active styles */
+        .nav-link {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 16px;
+        }
+
+        .nav-link:hover, .nav-link:focus {
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+
+        .nav-link:active {
+            background-color: #1d4ed8;
+            color: #ffffff;
+        }
+
+        /* Custom styles for number input */
+        .number-input {
+            width: 60px;
+            height: 40px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            padding: 0 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .number-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        /* Remove border from buttons */
+        .button-no-border {
+            border: none;
+        }
+
+        /* Cart styles */
+        .cart {
+            padding: 16px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-top: 16px;
+        }
+
+        .cart-header {
+            padding: 16px;
+            background-color: #3b82f6;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-body {
+            padding: 16px;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 16px;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .cart-item-quantity {
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .cart-item-price {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .cart-footer {
+            padding: 16px;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .total-container {
+            display: flex;
+            justify-content: flex-start; 
+            align-items: center;
+        }
+
+        .cart-total {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .cart-checkout {
+            background-color: #3b82f6;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .total-container {
+            display: flex;
+            justify-content: flex-start; /* Align to the left */
+            align-items: center;
+        }
+
+        .total-label {
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 8px; /* Space between label and amount */
+        }
+
+        .total-amount {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .cart-checkout:hover {
+            background-color: #2563eb;
+        }
+
+        
+        .cart-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #3b82f6;
+            color: #ffffff;
+            border-radius: 50%;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .cart-icon:hover {
+            background-color: #2563eb;
+            transform: scale(1.1);
+        }
+
+        .cart-icon i {
+            font-size: 20px;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #ff0000;
+            color: #ffffff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+       
+   
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img alt="Bhamra Furniture logo" class="h-12" height="48" src="Logo.jpg" width="48"/>
+                <a class="text-xl font-bold text-gray-800 hover:text-blue-500 no-underline" href="#">
+                    Bhamra Furniture
+                </a>
+            </div>
+            <div class="flex space-x-4 h-12">
+                <a class="text-gray-800 transition duration-300 nav-link" href="Home.html">
+                    Home
+                </a>
+                <a class="text-gray-800 transition duration-300 nav-link" href="Shop.html">
+                    Shop
+                </a>
+                <a class="text-gray-800 transition duration-300 nav-link" href="About.html">
+                    About Us
+                </a>
+                <a class="text-gray-800 transition duration-300 nav-link" href="Contact.html">
+                    Contact Us
+                </a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <input class="border border-gray-300 rounded-l px-4 py-2 search-input" placeholder="Search..." type="text"/>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-r hover-bg-blue transition duration-300 search-button">
+                    Search
+                </button>
+                <a href="Cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-8">
+                Review Your Order
+            </h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold mb-4">Order Details</h3>
+                <div id="confirmation-items" class="mb-4"></div>
+                <div class="total-container">
+                    <span class="total-amount" id="confirmation-total">₹0</span>
+                </div>
+                <div class="flex flex-col items-center mb-4">
+                    <h3 class="text-lg font-bold mb-2">Are you sure you want to confirm your order?</h3>
+                    <div class="flex justify-end space-x-4"> 
+                        <button style="background-color: #4caf50; color: white; padding: 12px 24px; border-radius: 9999px; font-size: 1rem; transition: background-color 0.3s; margin-left: 20px;" 
+                                onmouseover="this.style.backgroundColor='green'" 
+                                onmouseout="this.style.backgroundColor='#4caf50'" 
+                                onclick="proceedToCheckout()">
+                            Yes
+                        </button>
+                        <button style="background-color: #e53e3e; color: white; padding: 12px 24px; border-radius: 9999px; font-size: 1rem; transition: background-color 0.3s;" 
+                                onmouseover="this.style.backgroundColor='#c53030'" 
+                                onmouseout="this.style.backgroundColor='#e53e3e'" 
+                                onclick="cancelOrder()">
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2024 Bhamra Furniture. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+    function loadCartFromLocalStorage() {
+        const savedCartItems = localStorage.getItem('cartItems');
+        const confirmationItemsContainer = document.getElementById("confirmation-items");
+        const confirmationTotal = document.getElementById("confirmation-total");
+        let total = 0;
+
+        if (savedCartItems) {
+            const cartItems = JSON.parse(savedCartItems);
+            confirmationItemsContainer.innerHTML = ""; 
+
+            cartItems.forEach((item) => {
+                const cartItem = document.createElement("div");
+                cartItem.classList.add("cart-item", "flex", "items-center", "mb-4");
+
+                const itemImage = document.createElement("img");
+                itemImage.src = item.image; 
+                itemImage.alt = item.title;
+                itemImage.classList.add("w-20", "h-20", "object-cover", "mr-4");
+
+                const itemDetails = document.createElement("div");
+                itemDetails.classList.add("flex-1");
+
+                const itemTitle = document.createElement("div");
+                itemTitle.classList.add("font-bold");
+                itemTitle.textContent = item.title;
+
+                const itemPrice = document.createElement("div");
+                itemPrice.textContent = `Price: ₹${item.price}`;
+
+                const itemQuantity = document.createElement("div");
+                itemQuantity.textContent = `Quantity: ${item.quantity}`;
+
+                itemDetails.appendChild(itemTitle);
+                itemDetails.appendChild(itemPrice);
+                itemDetails.appendChild(itemQuantity);
+
+                cartItem.appendChild(itemImage);
+                cartItem.appendChild(itemDetails);
+
+                confirmationItemsContainer.appendChild(cartItem);
+                total += item.price * item.quantity;
+            });
+
+            confirmationTotal.textContent = `Total: ₹${total}`; 
+        } else {
+            displayEmptyCartMessage();
+            confirmationTotal.textContent = `Total: ₹0`;
+        }
+    }
+
+    function displayEmptyCartMessage() {
+        const confirmationItemsContainer = document.getElementById("confirmation-items");
+        confirmationItemsContainer.innerHTML = `
+            <div class="text-center py-6">
+                <h3 class="text-xl font-bold mb-4">Your cart is currently empty.</h3>
+                <a href="Shop.html" class="bg-blue-500 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-600 transition duration-300">Start Shopping</a>
+            </div>
+        `;
+    }
+
+    function proceedToCheckout() {
+        const orderDetails = {
+            items: JSON.parse(localStorage.getItem('cartItems')),
+            totalAmount: parseFloat(document.getElementById("confirmation-total").textContent.replace('Total: ₹', '')),
+            orderDate: new Date().toLocaleString()
+        };
+
+        localStorage.setItem('orderDetails', JSON.stringify(orderDetails));
+        window.location.href = 'Checkout.html'; 
+    }
+
+    function cancelOrder() {
+        window.location.href = 'Cart.html';
+    }
+
+    document.addEventListener("DOMContentLoaded", loadCartFromLocalStorage);
+</script>
+<script src="Java.js"></script>
+
+</body>
+</html>
+

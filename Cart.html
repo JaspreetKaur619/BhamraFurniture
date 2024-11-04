@@ -1,0 +1,790 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Cart - Bhamra Furniture</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-white {
+            color: #ffffff;
+        }
+
+        .text-gray-100 {
+            color: #f3f4f6;
+        }
+
+        .text-gray-600 {
+            color: #4b5563;
+        }
+
+        .text-gray-700 {
+            color: #374151;
+        }
+
+        .text-gray-800 {
+            color: #1f2937;
+        }
+
+        .text-gray-900 {
+            color: #111827;
+        }
+
+        .text-xl {
+            font-size: 20px;
+        }
+
+        .text-3xl {
+            font-size: 30px;
+        }
+
+        .text-5xl {
+            font-size: 48px;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .bg-white {
+            background-color: #ffffff;
+        }
+
+        .bg-gray-100 {
+            background-color: #f3f4f6;
+        }
+
+        .bg-gray-200 {
+            background-color: #e5e7eb;
+        }
+
+        .bg-gray-800 {
+            background-color: #1f2937;
+        }
+
+        .bg-blue-500 {
+            background-color: #3b82f6;
+        }
+
+        .hover-bg-blue:hover {
+            background-color: #2563eb;
+        }
+
+        .hover-text-blue:hover {
+            color: #2563eb;
+        }
+
+        .rounded {
+            border-radius: 4px;
+        }
+
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .rounded-l {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .rounded-r {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        .shadow-md {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .transition {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .duration-300 {
+            transition-duration: 300ms;
+        }
+
+        .transform {
+            transform: scale(1);
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .h-12 {
+            height: 48px;
+        }
+
+        .h-48 {
+            height: 192px;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .object-cover {
+            object-fit: cover;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .p-6 {
+            padding: 24px;
+        }
+
+        .py-3 {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .py-6 {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        .py-12 {
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+
+        .px-4 {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .px-6 {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .mb-2 {
+            margin-bottom: 8px;
+        }
+
+        .mb-4 {
+            margin-bottom: 16px;
+        }
+
+        .mb-8 {
+            margin-bottom: 32px;
+        }
+
+        .space-x-4 > * + * {
+            margin-left: 16px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .md\:grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .lg\:grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .gap-8 {
+            gap: 32px;
+        }
+
+        .bg-cover {
+            background-size: cover;
+        }
+
+        .bg-center {
+            background-position: center;
+        }
+
+        .h-screen {
+            height: 100vh;
+        }
+
+        .rounded-lg {
+            border-radius: 8px;
+        }
+
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .border {
+            border-width: 1px;
+        }
+
+        .border-gray-300 {
+            border-color: #d1d5db;
+        }
+
+        .hover\:text-gray-400:hover {
+            color: #9ca3af;
+        }
+
+        .hover\:bg-blue-600:hover {
+            background-color: #2563eb;
+        }
+
+        .hover\:shadow-lg:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+
+        .no-underline {
+            text-decoration: none;
+        }
+
+        .search-input {
+            width: 200px;
+            height: 40px;
+        }
+
+        .search-button {
+            height: 40px;
+            border: none;
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        button:hover, a:hover {
+            cursor: pointer;
+        }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 16px;
+        }
+
+        .nav-link:hover, .nav-link:focus {
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+
+        .nav-link:active {
+            background-color: #1d4ed8;
+            color: #ffffff;
+        }
+        .number-input {
+            width: 60px;
+            height: 40px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            padding: 0 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .number-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+        .button-no-border {
+            border: none;
+        }
+        .cart {
+            padding: 16px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-top: 16px;
+        }
+
+        .cart-header {
+            padding: 16px;
+            background-color: #3b82f6;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-body {
+            padding: 16px;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .cart-item-details {
+            flex: 1;
+            margin-left: 16px;
+        }
+
+        .cart-item-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .cart-item-quantity {
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .cart-item-price {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .cart-footer {
+            padding: 16px;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-total {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .cart-checkout {
+            background-color: #3b82f6;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .cart-checkout:hover {
+            background-color: #2563eb;
+        }
+        .cart-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #3b82f6;
+            color: #ffffff;
+            border-radius: 50%;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .cart-icon:hover {
+            background-color: #2563eb;
+            transform: scale(1.1);
+        }
+
+        .cart-icon i {
+            font-size: 20px;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #ff0000;
+            color: #ffffff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .remove-button {
+        background-color: #e53e3e; 
+        color: #ffffff; 
+        padding: 8px 12px; 
+        border: none; 
+        border-radius: 4px; 
+        font-size: 14px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+        margin-left: 8px; 
+        }
+
+        .remove-button:hover {
+            background-color: #c53030; 
+        }
+        .minus-button {
+            background-color: #f6ad55; 
+            color: #ffffff;
+            padding: 8px 12px; 
+            border: none; 
+            border-radius: 4px; 
+            font-size: 14px; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease; 
+        }
+
+        .minus-button:hover {
+            background-color: #dd6b20; 
+        }
+        .cancel-order-button {
+            background-color: #f56565; 
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cancel-order-button:hover {
+            background-color: #c53030; 
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img alt="Bhamra Furniture logo" class="h-12" height="48" src="Logo.jpg" width="48"/>
+                <a class="text-xl font-bold text-gray-800 hover-text-blue no-underline" href="#">
+                    Bhamra Furniture
+                </a>
+            </div>
+            <div class="flex space-x-4 h-12">
+                <a class="text-gray-800 transition duration-300 nav-link" href="Home.html">
+                    Home
+                </a>
+                <a class="text-gray-800 transition duration-300 nav-link" href="Shop.html">
+                    Shop
+                </a>
+                <a class="text-gray-800 transition duration-300 nav-link" href="About.html">
+                    About Us
+                </a>
+                <a class="text-gray-800 transition duration-300 nav-link" href="Contact.html">
+                    Contact Us
+                </a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <input id='search-input' class="border border-gray-300 rounded-l px-4 py-2 search-input" placeholder="Search..." type="text"/>
+                <button id='search-button' class="bg-blue-500 text-white px-4 py-2 rounded-r hover-bg-blue transition duration-300 search-button">
+                    Search
+                </button>
+                <a href="Cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">
+                Your Cart
+            </h2>
+            <div class="cart">
+                <div class="cart-header">
+                    <h2>Cart</h2>
+                </div>
+                <div class="cart-body" id="cart-items">
+                </div>
+                <div class="cart-footer">
+                    <span class="cart-total" id="cart-total">Total: ₹0</span>
+                    <button class="cart-checkout" onclick="proceedToCheckout()">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">
+                Your Orders
+            </h2>
+            <div class="cart">
+                <div class="cart-header">
+                    <h2>Orders</h2>
+                </div>
+                <div class="cart-body" id="order-items">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+         <p>
+          © 2024 Bhamra Furniture. All rights reserved.
+         </p>
+        </div>
+       </footer>
+       <script>
+        let cartItems = [];
+        let orderItems = [];
+
+function loadCartFromLocalStorage() {
+    const savedCartItems = localStorage.getItem('cartItems');
+    if (savedCartItems) {
+        cartItems = JSON.parse(savedCartItems);
+        updateCart();
+    } else {
+        displayEmptyCartMessage();
+    }
+}
+
+function updateCart() {
+    const cartItemsContainer = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+    cartItemsContainer.innerHTML = "";
+    let total = 0;
+
+    if (cartItems.length === 0) {
+        displayEmptyCartMessage();
+        cartTotal.textContent = `Total: ₹0`; 
+        return;
+    }
+
+    cartItems.forEach((item, index) => {
+        const cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item", "flex", "justify-between", "items-center", "mb-4");
+
+        const itemImage = document.createElement("img");
+        itemImage.src = item.image;
+        itemImage.alt = item.title;
+        itemImage.classList.add("w-12", "h-12", "object-cover", "rounded");
+
+        const itemDetails = document.createElement("div");
+        itemDetails.classList.add("cart-item-details", "flex-1", "ml-4");
+
+        const itemTitle = document.createElement("div");
+        itemTitle.classList.add("cart-item-title", "text-lg", "font-bold");
+        itemTitle.textContent = item.title;
+
+        const itemQuantity = document.createElement("div");
+        itemQuantity.classList.add("cart-item-quantity", "text-gray-600");
+        itemQuantity.textContent = `Quantity: ${item.quantity}`;
+
+        const itemPrice = document.createElement("div");
+        itemPrice.classList.add("cart-item-price", "text-lg", "font-bold");
+        itemPrice.textContent = `₹${item.price}`;
+
+        const removeButton = document.createElement("button");
+        removeButton.classList.add("remove-button");
+        removeButton.textContent = "Remove";
+        removeButton.onclick = () => removeItem(index);
+
+        const decreaseButton = document.createElement("button");
+        decreaseButton.classList.add("remove-button");
+        decreaseButton.textContent = "-";
+        decreaseButton.onclick = () => decreaseQuantity(index);
+
+        itemDetails.appendChild(itemTitle);
+        itemDetails.appendChild(itemQuantity);
+        itemDetails.appendChild(itemPrice);
+
+        cartItem.appendChild(itemImage);
+        cartItem.appendChild(itemDetails);
+        cartItem.appendChild(decreaseButton);
+        cartItem.appendChild(removeButton);
+
+        cartItemsContainer.appendChild(cartItem);
+
+        total += item.price * item.quantity;
+    });
+
+    cartTotal.textContent = `Total: ₹${total}`;
+}
+
+function displayEmptyCartMessage() {
+    const cartItemsContainer = document.getElementById("cart-items");
+    cartItemsContainer.innerHTML = `
+        <div class="text-center py-6">
+            <h3 class="text-xl font-bold mb-4">Your cart is currently empty.</h3>
+            <a href="Shop.html" class="bg-blue-500 text-white px-6 py-3 rounded-full text-lg hover-bg-blue transition duration-300">Start Shopping</a>
+        </div>
+    `;
+}
+
+function removeItem(index) {
+    cartItems.splice(index, 1);
+    saveCartToLocalStorage();
+    updateCart();
+}
+
+function decreaseQuantity(index) {
+    if (cartItems[index].quantity > 1) {
+        cartItems[index].quantity -= 1;
+    } else {
+        cartItems.splice(index, 1);
+    }
+    saveCartToLocalStorage();
+    updateCart();
+}
+function loadOrdersFromLocalStorage() {
+    const savedOrderItems = localStorage.getItem('orderItems');
+    const orderItemsContainer = document.getElementById("order-items");
+    orderItemsContainer.innerHTML = ""; 
+
+    if (savedOrderItems) {
+        let orderItems = JSON.parse(savedOrderItems);
+
+        if (orderItems.length === 0) {
+            displayEmptyOrdersMessage();
+        } else {
+            orderItems.forEach((order, index) => {
+                const orderItem = document.createElement("div");
+                orderItem.classList.add("order-item", "flex", "flex-col", "mb-4", "p-4", "border", "border-gray-300", "rounded");
+
+                const orderDetails = document.createElement("div");
+                orderDetails.classList.add("order-item-details");
+
+                const orderHeader = document.createElement("h4");
+                orderHeader.classList.add("text-lg", "font-bold");
+                orderHeader.textContent = `Order Date: ${order.date} | Payment Method: ${order.method}`;
+
+                const itemsList = document.createElement("ul");
+                itemsList.classList.add("mt-2");
+
+                order.items.forEach(item => {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = `${item.title} - Quantity: ${item.quantity} - Price: ₹${item.price}`;
+                    itemsList.appendChild(listItem);
+                });
+
+                const cancelButton = document.createElement("button");
+                cancelButton.classList.add("cancel-order-button");
+                cancelButton.textContent = "Cancel Order";
+                cancelButton.onclick = function() {
+                    cancelOrder(index);
+                };
+
+                orderDetails.appendChild(orderHeader);
+                orderDetails.appendChild(itemsList);
+                orderDetails.appendChild(cancelButton);
+                orderItem.appendChild(orderDetails);
+                orderItemsContainer.appendChild(orderItem);
+            });
+        }
+    } else {
+        displayEmptyOrdersMessage();
+    }
+}
+function cancelOrder(orderIndex) {
+    const confirmation = confirm("Are you sure you want to cancel this order?");
+    if (confirmation) {
+        const savedOrderItems = localStorage.getItem('orderItems');
+        if (savedOrderItems) {
+            let orderItems = JSON.parse(savedOrderItems);
+            orderItems.splice(orderIndex, 1); 
+            localStorage.setItem('orderItems', JSON.stringify(orderItems)); 
+            loadOrdersFromLocalStorage(); 
+        }
+    }
+}
+        function updateOrders() {
+            const orderItemsContainer = document.getElementById("order-items");
+            orderItemsContainer.innerHTML = "";
+
+            if (orderItems.length === 0) {
+                displayEmptyOrdersMessage();
+                return;
+            }
+
+            orderItems.forEach((order) => {
+                const orderItem = document.createElement("div");
+                orderItem.classList.add("order-item", "flex", "justify-between", "items-center", "mb-4");
+
+                const orderDetails = document.createElement("div");
+                orderDetails.classList.add("order-item-details", "flex-1", "ml-4");
+
+                const orderTitle = document.createElement("div");
+                orderTitle.classList.add("order-item-title", "text-lg", "font-bold");
+                orderTitle.textContent = order.title;
+
+                const orderQuantity = document.createElement("div");
+                orderQuantity.classList.add("order-item-quantity", "text-gray-600");
+                orderQuantity.textContent = `Quantity: ${order.quantity}`;
+
+                const orderPrice = document.createElement("div");
+                orderPrice.classList.add("order-item-price", "text-lg", "font-bold");
+                orderPrice.textContent = `₹${order.price}`;
+
+                orderDetails.appendChild(orderTitle);
+                orderDetails.appendChild(orderQuantity);
+                orderDetails.appendChild(orderPrice);
+
+                orderItem.appendChild(orderDetails);
+                orderItemsContainer.appendChild(orderItem);
+            });
+        }
+
+        function displayEmptyOrdersMessage() {
+    const orderItemsContainer = document.getElementById("order-items");
+    orderItemsContainer.innerHTML = `
+        <div class="empty-orders-message text-center" id="empty-orders-message">
+            <h3 class="text-xl font-bold">No orders placed yet.</h3>
+        </div>
+    `;
+}
+function saveCartToLocalStorage() {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+}
+function proceedToCheckout() {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    window.location.href = 'Confirmation.html';
+}
+document.addEventListener("DOMContentLoaded", () => {
+            loadCartFromLocalStorage();
+            loadOrdersFromLocalStorage(); 
+        });
+</script>
+<script src="Java2.js"></script>
+<script src="Java2.js"></script>
+</body>
+</html>
+        

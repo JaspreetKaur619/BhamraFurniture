@@ -1,0 +1,726 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Payment - Bhamra Furniture</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-white {
+            color: #ffffff;
+        }
+
+        .text-gray-100 {
+            color: #f3f4f6;
+        }
+
+        .text-gray-600 {
+            color: #4b5563;
+        }
+
+        .text-gray-700 {
+            color: #374151;
+        }
+
+        .text-gray-800 {
+            color: #1f2937;
+        }
+
+        .text-gray-900 {
+            color: #111827;
+        }
+
+        .text-xl {
+            font-size: 20px;
+        }
+
+        .text-3xl {
+            font-size: 30px;
+        }
+
+        .text-5xl {
+            font-size: 48px;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .bg-white {
+            background-color: #ffffff;
+        }
+
+        .bg-gray-100 {
+            background-color: #f3f4f6;
+        }
+
+        .bg-gray-200 {
+            background-color: #e5e7eb;
+        }
+
+        .bg-gray-800 {
+            background-color: #1f2937;
+        }
+
+        .bg-blue-500 {
+            background-color: #3b82f6;
+        }
+
+        .hover-bg-blue:hover {
+            background-color: #2563eb;
+        }
+
+        .hover-text-blue:hover {
+            color: #2563eb;
+        }
+
+        .rounded {
+            border-radius: 4px;
+        }
+
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .rounded-l {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .rounded-r {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        .shadow-md {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .transition {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .duration-300 {
+            transition-duration: 300ms;
+        }
+
+        .transform {
+            transform: scale(1);
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .h-12 {
+            height: 48px;
+        }
+
+        .h-48 {
+            height: 192px;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .object-cover {
+            object-fit: cover;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .p-6 {
+            padding: 24px;
+        }
+
+        .py-3 {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .py-6 {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        .py-12 {
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+
+        .px-4 {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .px-6 {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .mb-2 {
+            margin-bottom : 8px;
+        }
+
+        .mb-4 {
+            margin-bottom: 16px;
+        }
+
+        .mb-8 {
+            margin-bottom: 32px;
+        }
+
+        .space-x-4 > * + * {
+            margin-left: 16px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .md\:grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .lg\:grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .gap-8 {
+            gap: 32px;
+        }
+
+        .bg-cover {
+            background-size: cover;
+        }
+
+        .bg-center {
+            background-position: center;
+        }
+
+        .h-screen {
+            height: 100vh;
+        }
+
+        .rounded-lg {
+            border-radius: 8px;
+        }
+
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .border {
+            border-width: 1px;
+        }
+
+        .border-gray-300 {
+            border-color: #d1d5db;
+        }
+
+        .hover\:text-gray-400:hover {
+            color: #9ca3af;
+        }
+
+        .hover\:bg-blue-600:hover {
+            background-color: #2563eb;
+        }
+
+        .hover\:shadow-lg:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+
+        .no-underline {
+            text-decoration: none;
+        }
+
+        .search-input {
+            width: 200px;
+            height: 40px;
+        }
+
+        .search-button {
+            height: 40px;
+            border: none;
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        button:hover, a:hover {
+            cursor: pointer;
+        }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 16px;
+        }
+
+        .nav-link:hover, .nav-link:focus {
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+
+        .nav-link:active {
+            background-color: #1d4ed8;
+            color: #ffffff;
+        }
+        .number-input {
+            width: 60px;
+            height: 40px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            padding: 0 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .number-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+        .button-no-border {
+            border: none;
+        }
+        .cart {
+            padding: 16px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-top: 16px;
+        }
+
+        .cart-header {
+            padding: 16px;
+            background-color: #3b82f6;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-body {
+            padding: 16px;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .cart-item-details {
+            flex: 1;
+            margin-left: 16px;
+        }
+
+        .cart-item-title {
+            font-size: 16px ;
+            font-weight: bold;
+        }
+
+        .cart-item-quantity {
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .cart-item-price {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .cart-footer {
+            padding: 16px;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-total {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .cart-checkout {
+            background-color: #3b82f6;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .cart-checkout:hover {
+            background-color: #2563eb;
+        }
+
+        .cart-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #3b82f6;
+            color: #ffffff;
+            border-radius: 50%;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .cart-icon:hover {
+            background-color: #2563eb;
+            transform: scale(1.1);
+        }
+
+        .cart-icon i {
+            font-size: 20px;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #ff0000;
+            color: #ffffff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .remove-button {
+        background-color: #e53e3e; 
+        color: #ffffff; 
+        padding: 8px 12px; 
+        border: none; 
+        border-radius: 4px; 
+        font-size: 14px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+        margin-left: 8px; 
+        }
+
+        .remove-button:hover {
+            background-color: #c53030; 
+        }
+        .minus-button {
+            background-color: #f6ad55; 
+            color: #ffffff;
+            padding: 8px 12px; 
+            border: none; 
+            border-radius: 4px; 
+            font-size: 14px; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease; 
+        }
+
+        .minus-button:hover {
+            background-color: #dd6b20; 
+        }
+        .billing-details {
+            background-color: #f9fafb;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .billing-details h3 {
+            margin-bottom: 16px;
+        }
+
+        .billing-details label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .billing-details input, .billing-details select {
+            margin-bottom: 16px;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            width: calc(100% - 16px); 
+            box-sizing: border-box;
+        }
+
+        .billing-details input:focus, .billing-details select:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .hidden {
+            display: none;
+        }
+        .payment-dropdown {
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            background-color: #fff; 
+            font-size: 16px; 
+            color: #374151;
+            transition: border-color 0.3s;
+        }
+
+        .payment-dropdown:focus {
+            border-color: #3b82f6; 
+            outline: none;
+        }
+        .payment-dropdown option {
+            padding: 10px; 
+            background-color: #fff; 
+            color: #374151;
+        }
+        .payment-dropdown option:hover {
+            background-color: #f3f4f6; 
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img alt="Bhamra Furniture logo" class="h-12" height="48" src="Logo.jpg" width="48"/>
+                <a class="text-xl font-bold text-gray-800 hover-text-blue no-underline" href="#">
+                    Bhamra Furniture
+                </a>
+            </div>
+            <div class="flex space-x-4 h-12">
+                <a class="text-gray-800 transition duration-300 nav-link" href="Home.html">
+                    Home
+                </a>
+                <a class="text-gray-800 transition duration-300 nav-link" href="Shop.html">
+                    Shop
+                </a>
+                <a class="text-gray-800 transition duration-300 nav-link" href="About.html">
+                    About Us
+                </a>
+                <a class="text-gray-800 transition duration-300 nav-link" href="Contact.html">
+                    Contact Us
+                </a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <input id='search-input' class="border border-gray-300 rounded-l px-4 py-2 search-input" placeholder="Search..." type="text"/>
+                <button id='search-button' class="bg-blue-500 text-white px-4 py-2 rounded-r hover-bg-blue transition duration-300 search-button">
+                    Search
+                </button>
+                <a href="Cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">
+                Payment
+            </h2>
+            <div class="bg-white p-6 rounded-lg shadow-md billing-details">
+                <h3 class="text-2xl font-bold mb-4">Payment Options</h3>
+                <form id="payment-form">
+                    <div class="mb-4">
+                        <label for="payment-method" class="block mb-2 text-gray-700">Select Payment Method:</label>
+                    <select id="payment-method" class="payment-dropdown">
+                        <option value="">Select a method</option>
+                        <option value="card">Credit/Debit Card</option>
+                        <option value="upi">UPI</option>
+                        <option value="cash">Cash on Delivery</option>
+                    </select>
+                    </div>
+                    <div id="payment-details">
+                        <div id="card-details" class="hidden">
+                            <h4 class="text-xl font-bold mb-4">Card Details</h4>
+                            <div class="mb-4">
+                                <label class="block text-gray-700">Card Number</label>
+                                <input class="w-full border border-gray-300 rounded px-4 py-2" type="text" id="card-number" value="1234-5678-9012-3456" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700">Expiration Date</label>
+                                <input class="w-full border border-gray-300 rounded px-4 py-2" type="text" id="expiration-date" value="12/25" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700">CVV</label>
+                                <input class="w-full border border-gray-300 rounded px-4 py-2" type="text" id="cvv" value="123" required>
+                            </div>
+                        </div>
+                        <div id="upi-details" class="hidden">
+                            <h4 class="text-xl font-bold mb-4">UPI Details</h4>
+                            <div class="mb-4">
+                                <label class="block text-gray-700">UPI ID</label>
+                                <input class="w-full border border-gray-300 rounded px-4 py-2" type="text" id="upi-id" value="example@upi" required>
+                            </div>
+                        </div>
+                        <div id="cash-details" class="hidden">
+                            <h4 class="text-xl font-bold mb-4">Cash on Delivery</h4>
+                            <p class="text-gray-700">You will pay in cash when your order is delivered.</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-8">
+                        <button class="bg-blue-500 text-white px-6 py-3 rounded-full text-lg hover-bg-blue transition duration-300" type="submit">
+                            Place Order
+                        </button>
+                    </div >
+                    <br><div id="message" class="text-center mb-4"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&COPY; 2024 Bhamra Furniture. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const paymentMethodSelect = document.getElementById('payment-method');
+const paymentDetailsContainer = document.getElementById('payment-details');
+const cardDetails = document.getElementById('card-details');
+const upiDetails = document.getElementById('upi-details');
+const cashDetails = document.getElementById('cash-details');
+const messageArea = document.getElementById('message');
+
+paymentMethodSelect.addEventListener('change', (e) => {
+    const selectedPaymentMethod = e.target.value;
+    switch (selectedPaymentMethod) {
+        case 'card':
+            cardDetails.classList.remove('hidden');
+            upiDetails.classList.add('hidden');
+            cashDetails.classList.add('hidden');
+            break;
+        case 'upi':
+            upiDetails.classList.remove('hidden');
+            cardDetails.classList.add('hidden');
+            cashDetails.classList.add('hidden');
+            break;
+        case 'cash':
+            cashDetails.classList.remove('hidden');
+            cardDetails.classList.add('hidden');
+            upiDetails.classList.add('hidden');
+            break;
+        default:
+            cardDetails.classList.add('hidden');
+            upiDetails.classList.add('hidden');
+            cashDetails.classList.add('hidden');
+    }
+});
+
+document.getElementById('payment-form').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const paymentMethod = paymentMethodSelect.value;
+        let allFieldsValid = true;
+        messageArea.innerHTML = ''; 
+
+        if (!paymentMethod) {
+            messageArea.innerHTML = 'Please select a payment method.';
+            messageArea.classList.add('text-red-500');
+            allFieldsValid = false;
+        } else {
+    
+            if (paymentMethod === 'card') {
+                const cardNumber = document.getElementById('card-number').value;
+                const expirationDate = document.getElementById('expiration-date').value;
+                const cvv = document.getElementById('cvv').value;
+
+                if (!cardNumber || !expirationDate || !cvv) {
+                    messageArea.innerHTML = 'Please fill in all card details.';
+                    messageArea.classList.add('text-red-500');
+                    allFieldsValid = false;
+                }
+            } 
+           
+            else if (paymentMethod === 'upi') {
+                const upiId = document.getElementById('upi-id').value;
+
+                if (!upiId) {
+                    messageArea.innerHTML = 'Please fill in your UPI ID.';
+                    messageArea.classList.add('text-red-500');
+                    allFieldsValid = false;
+                }
+            }
+        }
+
+        if (allFieldsValid) {
+
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            const order = {
+                method: paymentMethod,
+                date: new Date().toLocaleString(),
+                items: cartItems 
+            };
+
+            let orderItems = JSON.parse(localStorage.getItem('orderItems')) || [];
+            orderItems.push(order);
+            localStorage.setItem('orderItems', JSON.stringify(orderItems));
+            localStorage.removeItem('cartItems');
+            messageArea.innerHTML = "Order placed successfully!";
+            messageArea.classList.remove('text-red-500'); 
+            messageArea.classList.add('text-green-500'); 
+            setTimeout(function() {
+                window.location.href = 'Home.html'; 
+            }, 3000);
+        }
+    });
+    </script>
+    <script src="Java.js"></script>
+</body>
+</html>

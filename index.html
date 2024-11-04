@@ -1,0 +1,661 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Bhamra Furniture</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-white {
+            color: #ffffff;
+        }
+
+        .text-gray-100 {
+            color: #f3f4f6;
+        }
+
+        .text-gray-600 {
+            color: #4b5563;
+        }
+
+        .text-gray-700 {
+            color: #374151;
+        }
+
+        .text-gray-800 {
+            color: #1f2937;
+        }
+
+        .text-gray-900 {
+            color: #111827;
+        }
+
+        .text-xl {
+            font-size: 20px;
+        }
+
+        .text-3xl {
+            font-size: 30px;
+        }
+
+        .text-5xl {
+            font-size: 48px;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .bg-white {
+            background-color: #ffffff;
+        }
+
+        .bg-gray-100 {
+            background-color: #f3f4f6;
+        }
+
+        .bg-gray-200 {
+            background-color: #e5e7eb;
+        }
+
+        .bg-gray-800 {
+            background-color: #1f2937;
+        }
+
+        .bg-blue-500 {
+            background-color: #3b82f6;
+        }
+
+        .hover-bg-blue:hover {
+            background-color: #2563eb;
+        }
+
+        .hover-text-blue:hover {
+            color: #2563eb;
+        }
+
+        .rounded {
+            border-radius: 4px;
+        }
+
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .rounded-l {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .rounded-r {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        .shadow-md {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .transition {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .duration-300 {
+            transition-duration: 300ms;
+        }
+
+        .transform {
+            transform: scale(1);
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .h-12 {
+            height: 48px;
+        }
+
+        .h-48 {
+            height: 192px;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .object-cover {
+            object-fit: cover;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .p-6 {
+            padding: 24px;
+        }
+
+        .py-3 {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .py-6 {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        .py-12 {
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+
+        .px-4 {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .px-6 {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .mb-2 {
+            margin-bottom: 8px;
+        }
+
+        .mb-4 {
+            margin-bottom: 16px;
+        }
+
+        .mb-8 {
+            margin-bottom: 32px;
+        }
+
+        .space-x-4 > * + * {
+            margin-left: 16px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .md\:grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .lg\:grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .gap-8 {
+            gap: 32px;
+        }
+
+        .bg-cover {
+            background-size: cover;
+        }
+
+        .bg-center {
+            background-position: center;
+        }
+
+        .h-screen {
+            height: 100vh;
+        }
+
+        .rounded-lg {
+            border-radius: 8px;
+        }
+
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .border {
+            border-width: 1px;
+        }
+
+        .border-gray-300 {
+            border-color: #d1d5db;
+        }
+
+        .hover\:text-gray-400:hover {
+            color: #9ca3af;
+        }
+
+        .hover\:bg-blue-600:hover {
+            background-color: #2563eb;
+        }
+
+        .hover\:shadow-lg:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+
+        .no-underline {
+            text-decoration: none;
+        }
+
+        .search-input {
+            width: 200px;
+            height: 40px;
+        }
+
+        .search-button {
+            height: 40px;
+            border: none;
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        button:hover, a:hover {
+            cursor: pointer;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 16px;
+        }
+
+        .nav-link:hover, .nav-link:focus {
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+
+        .nav-link:active {
+            background-color: #1d4ed8;
+            color: #ffffff;
+        }
+
+        .number-input {
+            width: 60px;
+            height: 40px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            padding: 0 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .number-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .button-no-border {
+            border: none;
+        }
+
+        .cart {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            background-color: #ffffff;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        .cart.open {
+            transform: translateX(0);
+        }
+
+        .cart-header {
+            padding: 16px;
+            background-color: #3b82f6;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-body {
+            padding: 16px;
+            overflow-y: auto;
+            height: calc(100% - 64px);
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .cart-item-details {
+            flex: 1;
+            margin-left: 16px;
+        }
+
+        .cart-item-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .cart-item-quantity {
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .cart-item-price {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .cart-footer {
+            padding: 16px;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-total {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .cart-checkout {
+            background-color: #3b82f6;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .cart-checkout:hover {
+            background-color: #2563eb;
+        }
+
+        .cart-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #3b82f6;
+            color: #ffffff;
+            border-radius: 50%;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .cart-icon:hover {
+            background-color: #2563eb;
+            transform: scale(1.1);
+        }
+
+        .cart-icon i {
+            font-size: 20px;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #ff0000;
+            color: #ffffff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img alt="Bhamra Furniture logo" class="h-12" height="48" src="Logo.jpg" width="48"/>
+                <a class="text-xl font-bold text-gray-800 hover-text-blue no-underline" href="#">
+                    Bhamra Furniture
+                </a>
+            </div>
+            <div class="flex space-x-4 h-12">
+                <a class="text-gray-800 transition duration-300 nav-link" href="Home.html">
+                    Home
+                </a>
+                <a class="text-gray-800 transition duration-300 nav-link" href="Shop.html">
+                    Shop
+                </a>
+                <a class="text-gray-800 transition duration-300 nav-link" href="About.html">
+                    About Us
+                </a>
+                <a class="text-gray-800 transition duration-300 nav-link" href="Contact.html">
+                    Contact Us
+                </a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <input id='search-input' class="border border-gray-300 rounded-l px-4 py-2 search-input" placeholder="Search..." type="text"/>
+                <button id='search-button' class="bg-blue-500 text-white px-4 py-2 rounded-r hover-bg-blue transition duration-300 search-button">
+                    Search
+                </button>
+                <a class="cart-icon" href="Cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="bg-cover bg-center h-screen" style="background-image: url('https://placehold.co/1920x1080');">
+        <div class="container mx-auto h-full center-content">
+            <div class="text-center text-white">
+                <h1 class="text-5xl font-bold mb-4">
+                    Discover Your Perfect Furniture
+                </h1>
+                <p class="text-xl mb-8">
+                    High-quality furniture to make your home beautiful
+                </p>
+                <a class="bg-blue-500 text-white px-6 py-3 rounded-full text-lg hover-bg-blue transition duration-300" href="Shop.html">
+                    Shop Now
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">
+                Featured Products
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden hover-scale hover-shadow">
+                    <a href="ModernChair.html">
+                        <img alt="Modern wooden chair with a comfortable cushion" class="w-full h-48 object-cover" height="300" src="ModernChair.jpg" width="400"/>
+                    </a>
+                    <div class="p-6">
+                        <a href="ModernChair.html" class="text-xl font-bold mb-2 no-underline text-gray-900 hover-text-blue">
+                            Modern Chair
+                        </a>
+                        <p class="text-gray-700 mb-4">
+                            A stylish and comfortable chair for your living room.
+                        </p>
+                        <span class="text-gray-900 font-bold">
+                            ₹9,000
+                        </span>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden hover-scale hover-shadow">
+                    <a href="DiningTable.html">
+                        <img alt="Elegant wooden dining table with a polished finish" class="w-full h-48 object-cover" height="300" src="DiningTable.jpg" width="400"/>
+                    </a>
+                    <div class="p-6">
+                        <a href="DiningTable.html" class="text-xl font-bold mb-2 no-underline text-gray-900 hover-text-blue">
+                            Dining Table
+                        </a>
+                        <p class="text-gray-700 mb-4">
+                            An elegant dining table perfect for family meals.
+                        </p>
+                        <span class="text-gray-900 font-bold">
+                            ₹26,000
+                        </span>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden hover-scale hover-shadow">
+                    <a href="ComfortableSofa.html">
+                        <img alt="Comfortable sofa with plush cushions in a modern living room" class="w-full h-48 object-cover" height="300" src="ComfortableSofa.jpg" width="400"/>
+                    </a>
+                    <div class="p-6">
+                        <a href="ComfortableSofa.html" class="text-xl font-bold mb-2 no-underline text-gray-900 hover-text-blue">
+                            Comfortable Sofa
+                        </a>
+                        <p class="text-gray-700 mb-4">
+                            A plush sofa that adds comfort and style to your home.
+                        </p>
+                        <span class="text-gray-900 font-bold">
+                            ₹33,000
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-200 py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">
+                What Our Customers Say
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white shadow-md rounded-lg p-6 hover-scale hover-shadow">
+                    <p class="text-gray-700 mb-4">
+                        "The furniture quality is amazing and the delivery was quick. Highly recommend!"
+                    </p>
+                    <div class="flex items-center">
+                        <img alt="Portrait of a satisfied customer" class="w-12 h-12 rounded-full mr-4" height="50" src="John.jpg" width="50"/>
+                        <div>
+                            <h4 class="text-lg font-bold">
+                                John Doe
+                            </h4>
+                            <p class="text-gray-600">
+                                Customer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6 hover-scale hover-shadow">
+                    <p class="text-gray-700 mb-4">
+                        "Beautiful designs and great customer service. Will definitely buy again."
+                    </p>
+                    <div class="flex items-center">
+                        <img alt="Portrait of a happy customer" class="w-12 h-12 rounded-full mr-4" height="50" src="Jack.jpg" width="50"/>
+                        <div>
+                            <h4 class="text-lg font-bold">
+                                Jack Smith
+                            </h4>
+                            <p class="text-gray-600">
+                                Customer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6 hover-scale hover-shadow">
+                    <p class="text-gray-700 mb-4">
+                        "Excellent quality and the prices are very reasonable. Love my new sofa!"
+                    </p>
+                    <div class="flex items-center">
+                        <img alt="Portrait of a delighted customer" class="w-12 h-12 rounded-full mr-4" height="50" src="David.jpg" width="50"/>
+                        <div>
+                            <h4 class="text-lg font-bold">
+                                David Johnson
+                            </h4>
+                            <p class="text-gray-600">
+                                Customer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>
+                © 2024 Bhamra Furniture. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            const reviewsContainer = document.getElementById('customer-reviews');
+
+            reviews.forEach(review => {
+                const reviewElement = document.createElement('div');
+                reviewElement.classList.add('bg-white', 'shadow-md', 'rounded-lg', 'p-6', 'hover-scale', 'hover-shadow');
+                reviewElement.innerHTML = `
+                    <p class="text-gray-700 mb-4">"${review.message}"</p>
+                    <div class="flex items-center">
+                        <img alt="Portrait of a customer" class="w-12 h-12 rounded-full mr-4" height="50" src="https://placehold.co/50x50" width="50"/>
+                        <div>
+                            <h4 class="text-lg font-bold">${review.name}</h4>
+                            <p class="text-gray-600">Customer</p>
+                        </div>
+                    </div>
+                `;
+                reviewsContainer.appendChild(reviewElement);
+            });
+        });
+    </script>
+    <script src="Java.js"></script>
+    <script src="Java2.js"></script>
+</body>
+</html>
